@@ -8,14 +8,14 @@ public class Person {
 	private Cat[] myCats;
 	private int numCats;
 	private int bal;
-	
+
 	public Person(String name, int age, double height) {
 		this.name= name;
 		this.age= age;
 		this.height= height;
 		myCats= new Cat[3];		// Plenty for any sane person!!
 	}
-	
+
 	public Person() {
 		name= "Somebody";
 		//MORE: Research better alternative:  this("Somebody", 0, 0);
@@ -60,12 +60,12 @@ public class Person {
 		return myCats[i];
 	}
 
-	
+
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + ", height=" + height + ", bankBalance="+ bal+ ", myCat="+ myCats[0]+ "]";
 		// TODO display other Cats too!
 	}
-	
+
 	public boolean equals(Object obj) {
 		// Eclipse generated. 
 		// MORE: Research Objects.equals() and .deepEquals()

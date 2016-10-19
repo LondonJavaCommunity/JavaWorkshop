@@ -1,15 +1,13 @@
-package exercise04;
+package exercise04b;
 
 import java.util.Arrays;
 
 public class Person {
 
-	/// 3. Rename various "Cat" fields and methods to ...Pet.., change various variables from Cat to Animal
-
 	private final String name;
 	int age;
 	double height;
-	private Animal[] myPets;	
+	private Animal[] myPets;
 	private int numPets;
 	private int bal;
 
@@ -21,7 +19,8 @@ public class Person {
 	}
 
 	public Person() {
-		this( "Somebody", 0, 0 );
+		name= "Somebody";
+		//MORE: Research better alternative:  this("Somebody", 0, 0);
 	}
 
 	public Person(Person p) {
@@ -51,26 +50,30 @@ public class Person {
 		height+= portionSize / 3.0;
 	}
 
-	public void addPet(Animal c) { 
+	public void addPet(Animal c) {
 		myPets[numPets++]= c;
 	}
 
-		public void buyPetFood(int amt) {
+	public void buyPetFood(int amt) {
 		bal-= amt/5;
 	}
 
-	public Animal getPet(int i) { 
+	public Animal getPet(int i) {
 		return myPets[i];
 	}
 
 
+	//	public String toString() {
+	//		return "Person [name=" + name + ", age=" + age + ", height=" + height + ", bankBalance="+ bal+ ", myPets="+ myPets[0]+ "]";
+	//		// TODO display other Pets too!
+	//	}
+	// Q2. Display all pets, Eclipse generated this, was^
 	@Override
 	public String toString() {
-		/// 3. and display Person's Pets:
 		return "Person [name=" + name + ", age=" + age + ", height=" + height + ", myPets=" + Arrays.toString(myPets)
 		+ ", numPets=" + numPets + ", bal=" + bal + "]";
 	}
-	
+
 	public boolean equals(Object obj) {
 		// Eclipse generated. 
 		// MORE: Research Objects.equals() and .deepEquals()

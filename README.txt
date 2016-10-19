@@ -6,7 +6,7 @@ before and at the event, for links and late-breaking news.
 Setup Java, Eclipse and Git by following the instructions at: http://myco.ws/LJC_setup_v02.pdf
 
 Get the latest Demo, Exercise and Solution projects from:
- git clone https://github.com/mikebgx/LJCworkspace.git
+ git clone https://github.com/LondonJavaCommunity/JavaWorkshop.git 
 
 Import these projects into Eclipse (or similar) using File> Import> Existing projects into workspace. Projects are named as follows:
 Demos for each chapter:
@@ -14,6 +14,7 @@ Demos for each chapter:
  D02_Objects/
  D03_Association/
  D04_Inheritance/
+ D05_Interfaces/
 Likewise Enn_* practical exercises  and  Snn_* example solutions  for each chapter.
 
 Happy hacking!

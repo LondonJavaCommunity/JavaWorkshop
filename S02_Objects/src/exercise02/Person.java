@@ -5,13 +5,13 @@ public class Person {
 	private final String name;
 	int age;
 	double height;
-	
+
 	public Person(String name, int age, double height) {
 		this.name= name;
 		this.age= age;
 		this.height= height;
 	}
-	
+
 	public Person() {
 		name= "Somebody";
 		//MORE: Research better alternative:  this("Somebody", 0, 0);
@@ -69,6 +69,6 @@ public class Person {
 			return false;
 		return true;
 	}
-	
-	
+
+
 }

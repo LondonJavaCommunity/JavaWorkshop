@@ -1,11 +1,11 @@
-package inheritance;
+package interfaces;
 
 public class Bus extends Vehicle {
 
 	private int takings;
 
 	public Bus(String make, String model) {
-		super(make, model);
+		super( make, model );
 	}
 
 	public void payFare( int f ) {
@@ -16,12 +16,11 @@ public class Bus extends Vehicle {
 	public void alertWalkers() {
 		System.out.println( "Honk Honk!" );
 	}
-	
+
 	@Override
-	public void showModel() {
-		super.showModel();
-		System.out.println( " Bus");
+	public void showMakeAndModel() {	/// 4.
+		super.showMakeAndModel();
+		System.out.print( " Bus. " );
 	}
 
-	
 }

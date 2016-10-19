@@ -4,27 +4,22 @@ public class Car extends Vehicle {
 
 	private int fuelLevel;
 
-	public Car() {
-		this( "SomeMake", "SomeModel");
+	public Car(String make, String model, int initialFuel) { /// 4.  and chain:
+		super( make, model );
+		fuelLevel= initialFuel;
 	}
-	
-	public Car(String make, String model) {
-		super(make, model);
+
+	public Car() { /// 4. Maybe?
 	}
-	
-	public void addFuel( int litres ) {
+
+	public void addFuel( int litres ) {	/// 2.
 		fuelLevel+= litres;
 	}
 
-	@Override
-	public void alertWalkers() {
-		System.out.println( "Toot toot" );
+	public void showDetails() { /// 3.
+		System.out.println( "My Fuel Level is "+ fuelLevel+ " and...");
+		showMakeAndModel(); 	// Call to "parent"  super.showModel() etc to disambiguate
+		System.out.println();
 	}
-	
-	@Override
-	public void showModel() {
-		super.showModel();
-		System.out.println( " Car");
-	}
-	
+
 }

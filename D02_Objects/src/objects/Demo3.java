@@ -24,7 +24,7 @@ public class Demo3 {
 		h.numRooms= 6;
 		h.setNumRooms(6);			/* Setter might validate eg disallow -ve */
 
-		
+
 		// 10. Initialise can be better than setter
 		House h2= new House( "Ivy Tower", 400);	
 		System.out.println( h2 );
@@ -42,7 +42,7 @@ public class Demo3 {
 			System.out.println( "Not same house \n" );
 		} /* */
 
-		
+
 		// 12. Copy an object, check for equality and equivalence, as we did with Strings
 		h3= new House( h2 );	// Write a Copy Ctor
 		System.out.println( "h2 = "+ h2 );
@@ -51,7 +51,7 @@ public class Demo3 {
 		System.out.println( "Are Houses h2 and h3 The Same? : "+ h2.equals(h3) + "\n"); 
 		/* Then uncomment House.equals() */		
 
-		
+
 		// 13. Array of objects
 		House[] street= new House[3];	 	// Array of Objects, how many House objects got created?
 		System.out.println( street );		/* What prints? */

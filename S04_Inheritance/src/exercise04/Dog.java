@@ -2,21 +2,17 @@ package exercise04;
 
 public class Dog extends Animal {
 
-	String name;	/// 1.
-	
-	public Dog(String name, int wt) {
-		super(wt);			/// 1.
-		this.name= name;	/// 1.
+	private String name;
+
+	public Dog(String name, int weight) {
+		super(weight);
+		this.name = name;
 	}
 
 	@Override
-	public String toString() {	/// 1.
+	public String toString() {
 		return "Dog [name=" + name + ", getWeight()=" + getWeight() + "]";
 	}
 
-	@Override
-	public void sayHi() {	/// 2.
-		System.out.println( "Woof!" );
-	}
 
 }
