@@ -15,7 +15,7 @@ public class Association {
 
 		// Using the Person class that you write earlier, proceed as below. Or use the Person class from the S02_Objects project if you prefer.
 
-		// 1. Add a Cat class with fields for name and weight, and a .feed( mealSize ) method which increases the Cat's weight
+		// 1. Add a Cat class with fields for name and weight, and a .eat( mealSize ) method which increases the Cat's weight
 		//    Test by coding: 
 		// 	Cat c= new Cat( "Elsa", 4 ); c.eat( 2 );  and display the Cat's details
 
