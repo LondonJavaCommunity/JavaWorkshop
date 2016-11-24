@@ -32,7 +32,7 @@ public class Interfaces {
 
 
 		Person p = new Person( "Mike", 21, 5.6 );
-		p.addFavourites( new  Cat("Charlie", 14) );
+		p.addFavourites( new Cat("Charlie", 14) );
 		p.addFavourites( new Car("BMW", "M3") );	// I wish!
 		System.out.println( "Cost of person's favourites: "+ p.favouritesValuation());
 
