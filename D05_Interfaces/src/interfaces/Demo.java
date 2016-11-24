@@ -6,6 +6,9 @@
  */
 package interfaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *  Section 5.  Interfaces
  */
@@ -40,6 +43,16 @@ public class Demo {
 		for( Habitable d0: myPads ) {
 			d0.sleepIn();
 		} /* */
+		
+		
+        // 5. (After ex5) Using interfaces for  "Generality" 
+        //  Decouple to remove dependencies and make code flexible
+        //  And take this further, "new" creates a coupling so remove that too (using a DI framework such as Spring)
+
+		//      ArrayList<String> names= new LinkedList<String>();  // Inflexible, change to LinkedList etc could require code changes
+        List<String> names= new ArrayList<String>();
+        names.add( "Mike" ); /* */
+
 
 	}
 
