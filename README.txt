@@ -14,6 +14,7 @@ Demos for each chapter:
  D02_Objects/
  D03_Association/
  D04_Inheritance/
+ D04b_Inheritance2/
  D05_Interfaces/
 Likewise Enn_* practical exercises  and  Snn_* example solutions  for each chapter.
 
