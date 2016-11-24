@@ -17,15 +17,14 @@ public class Inheritance {
 		// implement the following:
 
 
-		// TODO number as 1.. , and number other changes accordingly
-		// 2. All Animals can announce their presence so add an abstract void sayHi() method to the Animal class
+		// 1. All Animals can announce their presence so add an abstract void sayHi() method to the Animal class
 		//	  and implement it in the Cat and Dog classes by printing "woof" etc.
 		//	  Test by coding like:
 		//	Animal a= d; a.sayHi(); a= c; a.sayHi();
 		//	  Notice that the same code a.sayHi() does two different things, that's polymorphism!
 
 
-		// 3. Change the Person class, renaming any fields and methods that have Cat in their name so as to instead be named ...Pet...
+		// 2. Change the Person class, renaming any fields and methods that have Cat in their name so as to instead be named ...Pet...
 		//    Likewise change the type of these fields and methods from Cat to Animal.
 		//	  For example the Person's private   Cat[] myCats   field should become   private Animal[] myPets
 		//	  Hint: Use your IDE's Refactoring mechanism eg Eclipse> Right-click> Refactor> Rename
