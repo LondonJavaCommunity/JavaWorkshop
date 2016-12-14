@@ -1,0 +1,56 @@
+== JUnit Quick-Start guide for Eclipse
+
+. In `Package Explorer` view, click to select the project where you want to add a test
+
+. Use `File> New` to create a new source folder called `test`
+
+. Click to select the class that you want to test (Known as Class Under Test or `CUT` )
+
+. Use `File> New` to create a new `JUnit Test Case` as follows:
+
+* Choose `New JUnit 4 test` (not JUnit 3)
+* Source folder: The `test` folder that you created above.
+* Package: Same as the CUT
+* Name: Your test class should be named as per your CUT followed by a suffix of `Test` eg `DogTest`
+* Probably tick to create `setUp()` method
+* Press `Next` and optionally tick to generate test methods 
+
+. Then  run the test class by right-clicking it in the `Package Explorer` view and choosing `Run As > JUnit Test`
+
+. The code in your test methods should be as simple as possible (complexity requires tests and we don't want recursive hell!) The three essential elements are `Setup` `Invoke` and `Verify` eg:
+
+ Dog myDog= new Dog();	// Setup
+ myDog.eat( 10 );		// Invoke
+ assertEquals( 17, myDog.getWeight() );	// Verify
+
+
+==== Further steps to research and try
+
+. As an alternative to the Eclipse wizard, code your test method manually, such as:
+
+ @Test
+ public void testNewPerson_negativeAge_throwsException() {
+   ...
+ }
+
+. Where there is common setup code we can remove it from the test methods and place it in the @Before method, which is called before every test method gets invoked. Similarly the static @BeforeClass method which is called just once, before any of the test methods are invoked.
+
+. Where the `verify` logic becomes complex, this can be simplified by using the Hamcrest library eg: +
+ `assertThat( i, anyOf( greaterThan(j), lessThan(k) ) );` +
+Hamcrest requires static imports, which some IDEs cannot generate automatically, eg the above code requires:
+
+ import static org.junit.Assert.assertThat;
+ import static org.hamcrest.CoreMatchers.anyOf;
+ import static org.hamcrest.number.OrderingComparison.greaterThan;
+ import static org.hamcrest.number.OrderingComparison.lessThan;
+
+
+. If you need to check that a method threw an exception, research the optional parameters for the `@Test` annotation, such as:
+
+ 	@Test(expected=IllegalArgumentException.class)
+
+---
+Happy hacking!
+
+Mike [dot] Burton [at] MycoSystems.co.uk
+
